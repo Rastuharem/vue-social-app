@@ -2,5 +2,13 @@ import { createRouter, createWebHistory } from "vue-router";
 
 export default createRouter({
   history: createWebHistory(),
-  routes: [{ path: "/", name: "Home", component: () => import("../App.vue") }],
+  routes: [
+    {
+      path: "/",
+      component: () => import("../App.vue"),
+      children: [
+        { path: "", component: () => import("../pages/TodoList.vue") },
+      ],
+    },
+  ],
 });
