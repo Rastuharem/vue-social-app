@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* disable stupid overflow by vuetify */
+    overflow: auto !important;
+  }
+
+  body {
+    @apply box-border overflow-hidden;
+  }
+}

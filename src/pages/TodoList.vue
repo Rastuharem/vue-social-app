@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="h-full w-full bg-slate-300">List</div>
+  <div class="h-full w-full">List</div>
 </template>

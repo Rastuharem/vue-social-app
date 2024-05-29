@@ -5,9 +5,11 @@ export default createRouter({
   routes: [
     {
       path: "/",
-      component: () => import("../App.vue"),
+      component: () => import("@/layouts/MainLayout.vue"),
+      redirect: "/home",
       children: [
-        { path: "", component: () => import("../pages/TodoList.vue") },
+        { path: "/home", component: () => import("@/pages/HomePage.vue") },
+        { path: "/list", component: () => import("@/pages/TodoList.vue") },
       ],
     },
   ],
