@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { VIcon } from "vuetify/components";
-
-type IconSize = "x-small" | "small" | "default" | "large" | "x-large";
-
 interface IProps {
   icon?: {
     src: string;
-    size?: IconSize;
+    size?: number;
+    class?: string;
   };
 }
 
@@ -15,12 +12,17 @@ const props = defineProps<IProps>();
 
 <template>
   <button v-bind="$attrs">
-    <VIcon
+    <div
       v-if="props.icon"
-      :size="props.icon.size"
-      :icon="props.icon.src"
-      class="m-auto transition-all duration-300 hover:cursor-pointer hover:text-neutral-400"
-    />
+      :class="
+        props.icon.class ??
+        '' +
+          ' ' +
+          'm-auto transition-all duration-300 hover:cursor-pointer hover:text-neutral-400'
+      "
+    >
+      <i :class="props.icon.src + ' ' + `text-[${props.icon.size ?? 16}px]`" />
+    </div>
     <slot />
   </button>
 </template>

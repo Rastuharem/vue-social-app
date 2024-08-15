@@ -4,10 +4,10 @@ import MainHeader from "@/components/MainHeader.vue";
 
 <template>
   <div
-    class="h-screen w-screen flex-col overflow-hidden bg-gradient-to-br from-slate-700 to-slate-900"
+    class="flex h-screen w-screen flex-col overflow-hidden bg-gradient-to-br from-slate-700 to-slate-900"
   >
     <MainHeader />
-    <main class="flex h-full w-full">
+    <main class="flex grow overflow-auto">
       <RouterView />
     </main>
   </div>

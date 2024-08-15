@@ -9,7 +9,7 @@ export default createRouter({
       redirect: "/home",
       children: [
         { path: "/home", component: () => import("@/pages/HomePage.vue") },
-        { path: "/list", component: () => import("@/pages/TodoList.vue") },
+        { path: "/posts", component: () => import("@/pages/PostList.vue") },
       ],
     },
   ],

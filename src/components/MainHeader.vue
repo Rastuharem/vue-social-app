@@ -24,7 +24,7 @@ const handleGitHubClick = () => {
         class="mx-3"
         title="List"
         :icon="{ src: 'fas fa-list', size: 'x-large' }"
-        @click="router.push('/list')"
+        @click="router.push('/posts')"
       />
     </nav>
     <div>
